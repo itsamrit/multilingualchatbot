@@ -4,9 +4,7 @@ import os
 import google.generativeai as genai
 from flask import Flask, jsonify, request, send_file, send_from_directory
 
-# 🔥 FILL THIS OUT FIRST! 🔥
-# 🔥 GET YOUR GEMINI API KEY AT 🔥
-# 🔥 https://g.co/ai/idxGetGeminiKey 🔥
+
 API_KEY = 'AIzaSyBd8WTHPsny5L0VB3sVRTAe8I3CGQO2gNc'
 
 genai.configure(api_key=API_KEY)
@@ -22,12 +20,6 @@ def index():
 @app.route("/api/generate", methods=["POST"])
 def generate_api():
     if request.method == "POST":
-        if API_KEY == 'TODO':
-            return jsonify({ "error": '''
-                To get started, get an API key at
-                https://g.co/ai/idxGetGeminiKey and enter it in
-                main.py
-                '''.replace('\n', '') })
         try:
             req_body = request.get_json()
             content = req_body.get("contents")

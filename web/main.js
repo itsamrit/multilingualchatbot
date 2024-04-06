@@ -1,4 +1,4 @@
-import { streamGemini } from './gemini-api.js';
+import { streamGemini } from './bot-api.js';
 
 let form = document.querySelector('form');
 let promptInput = document.querySelector('input[name="prompt"]');
