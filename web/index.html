@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>multilingual</title>
+  <style>
+    body {
+      background-color: black; /* Set the background color to black */
+      color: white; /* Set text color to white for better readability */
+    }
+  </style>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <main>
+    <h2>Multilingual ChatBot</h2>
+    <form>
+      <div class="image-picker">
+        <label class="image-choice">
+          <input type="radio" checked name="chosen-image" value="/insightss.jpg">
+          <img id="selected-image" src="/insightss.jpg">
+        </label>
+      </div>
+      <div class="language-picker">
+        <label>
+          Type Language:
+          <input type="text" id="language-input" placeholder="Type language">
+        </label>
+      </div>
+      <div class="business-type-picker" id="business-type-picker" style="display:none;">
+        <label>
+          Select Business Type:
+          <select name="business-type">
+            <option value="startup">Startup</option>
+            <option value="small">Small Business</option>
+            <option value="medium">Medium Business</option>
+            <option value="large">Large Corporation</option>
+            <option value="family">Family Business</option>
+            <option value="nonprofit">Nonprofit Organization</option>
+            <option value="franchise">Franchise</option>
+            <option value="online">Online Business</option>
+            <option value="retail">Retail</option>
+            <option value="service">Service Business</option>
+          </select>
+        </label>
+      </div>
+      <div class="industry-picker" id="industry-picker" style="display:none;">
+        <label>
+          Select Industry:
+          <select name="industry">
+            <option value="technology">Technology</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="finance">Finance</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="education">Education</option>
+            <option value="hospitality">Hospitality</option>
+            <option value="agriculture">Agriculture</option>
+            <option value="construction">Construction</option>
+            <option value="media">Media & Entertainment</option>
+            <option value="transportation">Transportation</option>
+          </select>
+        </label>
+      </div>
+      <div class="prompt-box">
+        <label>
+          <input name="prompt" placeholder="Enter instructions here" type="text">
+        </label>
+        <button type="submit">Go</button>
+      </div>
+    </form>
+    <p class="output">(Results will appear here)</p>
+  </main>
+
+  <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script>
+  <script src="https://unpkg.com/base64-js@1.3.0/base64js.min.js"></script>
+  <script type="module" src="/main.js"></script>
+  <script>
+    const selectedImage = document.getElementById('selected-image');
+    selectedImage.style.display = 'none';
+  </script>
+</body>
+
+</html>
